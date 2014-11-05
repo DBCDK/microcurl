@@ -460,7 +460,7 @@ class MicroCURL {
 
   public function set_post_xml($value, $handle_no=null) {
     $headers = $this->get_option(CURLOPT_HTTPHEADER, $handle_no);
-    $headers[] = "Content-Type: text/xml";
+    $headers[] = "Content-Type: application/xml";
     if ($ret = $this->set_option(CURLOPT_HTTPHEADER, $headers, $handle_no))
       $ret = $this->set_post($value, $handle_no);
     return $ret;
