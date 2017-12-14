@@ -343,7 +343,9 @@ class MicroCURL {
       foreach ($this->curl_handle as $key => $handle) {
         $this->curl_options[$key][$option] = $value;
         $res = curl_setopt($this->curl_handle[$key], $option, $value);
-        if (!$res) return FALSE;
+        if (!$res) {
+          return FALSE;
+        }
       }
     }
     else {
@@ -398,7 +400,8 @@ class MicroCURL {
    */
 
   public function set_authentication($user, $passwd, $handle_no=null) {
-    return $this->set_option(CURLOPT_USERPWD, $user.':'.$passwd, $handle_no);
+    $ret = $this->set_option(CURLOPT_USERPWD, $user.':'.$passwd, $handle_no);
+    return $ret;
   }
 
 
