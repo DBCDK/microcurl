@@ -1,7 +1,7 @@
 name = MicroCURL
 description = Provides a small and simple library for using curl
 core = 7.x
-version = 0.2
+version = 7.x-1.0
 files[] = microcurl.inc
 
 
