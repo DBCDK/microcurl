@@ -158,7 +158,7 @@ class MicroCURL {
    * @param $url [optional] the URL to be accessed by this instance of the class. (string)
    */
 
-  public function microcurl($url=NULL) {
+  public function __construct($url=NULL) {
     global $curl_default_options;
 
     $this->curl_options = null;
